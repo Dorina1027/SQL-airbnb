@@ -16,4 +16,7 @@
 -- | Entire townhouse                    | 3588     | 2021-10-17                 |
 -- | Entire villa                        | 75       | 2021-10-12                 |
 
-
+SELECT property_type, COUNT(*) MAX(date_reviewed)
+FROM reviews
+JOIN listing ON listing_id= listing.id
+ORDER BY property type;
